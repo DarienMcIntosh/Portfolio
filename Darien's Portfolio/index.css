@@ -17,6 +17,17 @@ body{
     box-sizing: border-box;
 }
 
+header img{
+    width: 100px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+header img:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+
 header{
     margin: 0 10px 0;
     text-align: center;
@@ -31,12 +42,6 @@ header{
     background-color: rgba(250, 249, 246, 0.867);
     padding: 0 100px 0;
     z-index: 1000; 
-}
-
-h1{
-    
-    color: #3C202F;
-    text-shadow: 2px 2px 4px #d3cfcf;
 }
 
 nav{
@@ -64,21 +69,30 @@ nav a:hover {
     transform: scale(1.2);
 }
 
+.info {
+    display: flex;
+    flex-wrap: wrap; /* Important for responsiveness */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center on smaller screens */
+    padding: 30px; /* Add padding */
+}
+
 #about{
     text-align: center;
     background-color: #673d4d;
-    padding:50px 0 50px 0;
+    padding: 50px 0 50px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     margin: 0 30px 20px;    
 }
 
-#about h2{
-    font-family: 'Magneto', sans-serif;
+
+#about h1{
     color: white;
-    font-size: 28px;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
+    font-size: 2em; /* Use ems for better scaling */
+    margin: 10px 0 10px;
+    text-align: center; /* Center the heading */
+    flex: 1 1 100%; /* Take full width on smaller screens */
 }
 
 #about img{
@@ -88,6 +102,8 @@ nav a:hover {
     transition: transform 0.4s ease;
     align-items: center;
     box-shadow: 0 30px 40px #825260;
+    margin: 0 0 0 150px; /* Center the image */
+    
 }
 
 #about img:hover{
@@ -95,24 +111,26 @@ nav a:hover {
 }
 
 #about p{
-    padding:40px;
-    margin: 0 150px;
-    font-size: 16px;
+    font-size: 18px;
+    flex: 1; /* Allow text to take up available space */
+    max-width: 500px; /* Limit text width for readability */
+    text-align: justify;
+    margin: 0 100px;
 }
 
 #about .links {
-    font-size: 2.25rem;
-    padding: 30px;
+    font-size: 2.5rem;
+    margin: 30px 0 0 60px;
+    text-align: center;
+    flex: 1 1 100%; /* Take full width on smaller screens */
 }
 
 #about .links a {
-    padding: 0;
-    margin: 0 0.75rem;
+    margin: 0 10px ;
     text-decoration: none;
 }
 
 #about .links a i {
-    transition: transform 0.3s, color 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
 
@@ -146,7 +164,7 @@ nav a:hover {
     background-color: #efda3f;
     margin: 5px auto; /* Center the line */
     width: 15%; 
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .projects-container {
@@ -408,8 +426,8 @@ footer{
 
 @media (max-width: 576px) {
 
-    header h1 {
-        font-size: 13px;
+    header img {
+        width: 60px;
     }
 
     nav {
