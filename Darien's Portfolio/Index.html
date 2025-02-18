@@ -6,68 +6,92 @@
     <title>Darien's Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/gagalin" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 </head>
 <body>
-    <header><h1>Darien McIntosh</h1>
+    <header>
+        <h1>Darien McIntosh</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#Skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
+                
             </ul>
         </nav>
     </header>
     <section id="about">
-        <img src="./Images/darien.jpg" alt="Darien McIntosh">
-        <p>Hey! I'm Darien, a creative and driven third-year Information Technology student with a passion for user-centered design.
-            I combine technical skills and creative vision to build intuitive and engaging digital experiences. 
-            I'm a dedicated learner and excited to contribute to innovative projects.
-        </p>
-        <div class="links">
-            <a href="https://www.linkedin.com/in/darien-mcintosh-154a5423a/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/DarienMcIntosh" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a></div>
-        </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <hr class="divider">
-        <div class="proj">
-            <img src="./Images/Project1.jpg" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Project 1 Description</p>
-        </div>
-        <div class="proj">
-            <img src="./Images/Project2.jpg" alt="Project 2">
-            <h3>Project 2</h3>
-            <p>Project 2 Description</p>
-        </div>
-        <div class="proj">
-            <img src="./Images/Project3.jpg" alt="Project 3">
-            <h3>Project 3</h3>
-            <p>Project 3 Description</p>
+        <div class="info">
+            <h2>Hello World!</h2>
+            <hr class="divider">
+            <img src="./Images/darien.jpg" alt="Picture of Darien">
+            <p>Hey! I'm Darien, a creative and driven third-year Information Technology student with a passion for user-centered design.
+                <br>I combine technical skills and creative vision to build intuitive and engaging digital experiences. 
+                <br>I'm a dedicated learner and excited to contribute to innovative projects.
+            </p>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/darien-mcintosh-154a5423a/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/DarienMcIntosh" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
     </section>
+        <div class="pro-skills">
+            <section id="projects">
+                <h2>Projects</h2>
+                <hr class="divider">
+                <div class="projects-container">  <div class="project-card">
+                        <img src="./Images/Project1.jpg" alt="Project 1">
+                        <h3>Project 1</h3>
+                        <p>Project 1 Description</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="./Images/Project2.jpg" alt="Project 2">
+                        <h3>Project 2</h3>
+                        <p>Project 2 Description</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="./Images/Project3.jpg" alt="Project 3">
+                        <h3>Project 3</h3>
+                        <p>Project 3 Description</p>
+                    </div>
+                    </div>
+            </section>
+            <section id="Skills">
+                <h2>Skills</h2>
+                <hr class="divider">
+                <div class="skills-container">
+                    <i class="fi fi-brands-html5"></i>
+                    <i class="fi fi-brands-css3-alt"></i>
+                    <i class="fi fi-brands-js"></i>
+                    <i class="fi fi-brands-mysql"></i>
+                    <i class="fi fi-brands-python"></i>
+                </div>
+            </section>
+        </div>
     <section id="contact">
         <h2>Contact</h2>
-    <hr class="divider">
-    <form action="mailto:darien@example.com" method="post" enctype="text/plain">
-        <div class="name-email">  <div class="input-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
+        <hr class="divider">
+        <form action="mailto:darien@example.com" method="post" enctype="text/plain">
+            <div class="name-email">  <div class="input-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+            <div class="input-group">  <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-        </div>
-        <div class="input-group">  <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit">Send</button>
-    </form>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <footer>
