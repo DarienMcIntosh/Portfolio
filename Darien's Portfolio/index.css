@@ -104,7 +104,7 @@ nav a:hover {
     object-fit: cover;
     transition: transform 0.4s ease;
     align-items: center;
-    box-shadow: 0 30px 40px #825260;
+    box-shadow: 0 1px 30px #ffffff17;
     margin: 0 0 0 150px; /* Center the image */
     
 }
@@ -141,7 +141,7 @@ nav a:hover {
 
 #about .links a:hover i {
     color: #efda3f;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform 0.5s, color 0.5s;
 }
 
@@ -185,7 +185,7 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     background-color: white; /* White background for the card */
     transition: transform 0.3s ease; /* Smooth scaling on hover */
-    padding: 50px;
+    padding: 20px;
 }
 
 .project-card img {
@@ -193,6 +193,7 @@ nav a:hover {
     height: auto;
     display: block; /* Prevents a small space below the image */
     align-items: center;
+    border-radius: 5px;
 }
 
 .project-card h3,
@@ -205,6 +206,7 @@ nav a:hover {
 
 .project-card h3{
     color: #673d4d;
+    padding: 20px 0 0;
 }
 
 .project-card p{
@@ -245,34 +247,33 @@ nav a:hover {
 }
 
 .skills-container {
-    display: flex; /* Use Flexbox for horizontal layout */
-    flex-wrap: wrap; /* Allow wrapping to the next line */
-    gap: 40px; /* Spacing between cards */
-    justify-content: center; /* Center the cards horizontally */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 40px; 
+    justify-content: center; 
+    align-items: center; /* Vertically center icons */
     padding: 0 20px 30px;
     color: #673d4d;
     margin: 100px 0 100px;
 }
 
-
-.skills-container i{
+.skills-container i {
     font-size: 50px;
     border-radius: 10px;
     background-color: #FAF9F6;
     box-shadow: 0 0 15px #825260;
-    padding: 20px 30px 0;
-    
+    padding: 20px 30px 20px; /* Adjusted padding */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    width: 65px; /* Fixed width */
+    height: 65px; /* Fixed height */
 }
 
-.skills-container i:hover{
+.skills-container i:hover {
     color: #bead2f;
     transform: scale(1.2);
     transition: transform 0.7s, color 0.7s;
-}
-
-.skills-container .fa-brands{
-    padding-top: 20px;
-    font-size: 45px;
 }
 
 #contact{
@@ -399,6 +400,17 @@ footer{
         text-align: center;
         max-width: 100%;
     }
+
+    .skills-container {
+        gap: 30px;
+        margin: 80px 0 80px;
+    }
+
+    .skills-container i {
+        font-size: 45px;
+        width: 90px;
+        height: 90px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -449,18 +461,26 @@ footer{
     }
 
     .skills-container {
-        gap: 20px;
+        gap: 25px;
+        margin: 60px 0 60px;
     }
 
     .skills-container i {
         font-size: 40px;
-        padding: 15px 20px 0;
+        width: 80px;
+        height: 80px;
+        padding: 15px 20px 15px;
+    }
+
+    #contact .divider{
+        margin-bottom: 50px;
     }
 }
 
 @media (max-width: 480px) {
     header {
         padding: 0 20px;
+        margin: auto;
         
     }
 
@@ -490,20 +510,33 @@ footer{
     }
 
     .pro-skills {
-        margin: 0 10px;
+        margin: 0 10px 25px;
     }
 
     #projects, #Skills {
         margin: 0 10px;
-        padding: 50px 0;
+        padding: 30px 0;
     }
 
     .project-card {
         padding: 20px;
+        margin: 0 10px
     }
 
     #contact {
         margin: 0 10px;
         padding: 30px 10px;
+    }
+
+    .skills-container {
+        gap: 20px;
+        margin: 40px 0 40px;
+    }
+
+    .skills-container i {
+        font-size: 35px;
+        width: 70px;
+        height: 70px;
+        padding: 10px 15px 10px;
     }
 }
