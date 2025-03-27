@@ -9,6 +9,8 @@
     <link href="https://fonts.cdnfonts.com/css/gagalin" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
     <link rel="icon" href="./Images/logo.png" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <header>
@@ -47,24 +49,31 @@
             <section id="projects">
                 <h2>Projects</h2>
                 <hr class="divider">
-                <div class="projects-container">  <div class="project-card">
-                        <img src="./Images/ttt.png" alt="Project 1">
-                        <h3>Tic-Tac-Toe</h3>
-                        <p>I built this Tic-Tac-Toe game to brush up on my Html, Css & Javascript skills 
-                           and have some fun!  It's a simple project, but it demonstrates my ability to 
-                           implement game logic and create a user-friendly experience.
-                        </p>
-                    </div>
-                    <div class="project-card">
-                        <img src="./Images/Project2.jpg" alt="Project 2">
-                        <h3>Project 2</h3>
-                        <p>Project 2 Description</p>
-                    </div>
-                    <div class="project-card">
-                        <img src="./Images/Project3.jpg" alt="Project 3">
-                        <h3>Project 3</h3>
-                        <p>Project 3 Description</p>
-                    </div>
+                <div class="projects-container">  
+                    <a href="https://github.com/DarienMcIntosh/Tic-Tac-Toe" class="project-card-link">
+                        <div class="project-card">
+                            <img src="./Images/ttt.png" alt="Project 1">
+                            <h3>Tic-Tac-Toe</h3>
+                            <p>I built this Tic-Tac-Toe game to brush up on my Html, Css & Javascript skills 
+                               and have some fun!  It's a simple project, but it demonstrates my ability to 
+                               implement game logic and create a user-friendly experience.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="project2.html" class="project-card-link">
+                        <div class="project-card">
+                            <img src="./Images/Project2.jpg" alt="Project 2">
+                            <h3>Project 2</h3>
+                            <p>Project 2 Description</p>
+                        </div>
+                    </a>
+                    <a href="project3.html" class="project-card-link">
+                        <div class="project-card">
+                            <img src="./Images/Project3.jpg" alt="Project 3">
+                            <h3>Project 3</h3>
+                            <p>Project 3 Description</p>
+                        </div>
+                    </a>
                     </div>
             </section>
             <section id="Skills">
@@ -84,8 +93,9 @@
     <section id="contact">
         <h2>Contact</h2>
         <hr class="divider">
-        <form action="mailto:darienmcintosh43@gmail.com" method="post" enctype="text/plain">
-            <div class="name-email">  <div class="input-group">
+        <form id="contact-form">
+            <div class="name-email">
+                <div class="input-group">
                     <label for="name">Name *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
@@ -94,12 +104,23 @@
                     <input type="email" id="email" name="email" required>
                 </div>
             </div>
-            <div class="input-group">  <label for="message">Message</label>
+            <div class="input-group">
+                <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
             </div>
             <button type="submit">Send</button>
         </form>
     </section>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Message Sent!</h3>
+            <p>Thank you for your message. I'll get back to you soon.</p>
+        </div>
+    </div>
+
 
     <footer>
         <p>&copy; 2025 Darien McIntosh. All Rights Reserved.</p>
