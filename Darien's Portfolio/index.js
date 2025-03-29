@@ -18,10 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Send email using EmailJS with all details
         emailjs.send("service_dm43", "template_dm43", {
-            from_name: name,     // Sender's name
-            from_email: email,   // Sender's email
-            message: message,    // Message content
-            reply_to: email      // Optional: sets reply-to address
+            from_name: name,     
+            from_email: email,   
+            message: message,    
         }).then(
             function(response) {
                 console.log("SUCCESS", response);

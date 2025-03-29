@@ -74,7 +74,7 @@ nav a:hover {
     flex-wrap: wrap; /* Important for responsiveness */
     align-items: center; /* Vertically align items */
     justify-content: center; /* Center on smaller screens */
-    padding: 30px; /* Add padding */
+    padding: min(5em, 8%); 
 }
 
 #about{
@@ -202,7 +202,7 @@ nav a:hover {
 }
 
 .project-card img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block; /* Prevents a small space below the image */
     align-items: center;
@@ -374,7 +374,7 @@ nav a:hover {
 }
 
 #confirmation-modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
     left: 0;
@@ -384,10 +384,6 @@ nav a:hover {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     
-}
-
-#confirmation-modal h3 p{
-    color: black;
 }
 
 .modal-content {
@@ -400,6 +396,7 @@ nav a:hover {
     border-radius: 10px;
     text-align: center;
     position: relative;
+    color: green;
 }
 
 .close-button {
@@ -475,6 +472,10 @@ footer{
         width: 90px;
         height: 90px;
     }
+
+    .project-card img {
+        height: 220px; 
+    }
 }
 
 @media (max-width: 768px) {
@@ -494,15 +495,6 @@ footer{
         padding-top: 0;
     }
 
-    #about h1{
-        font-size: 25px;
-    }
-
-    #about p{
-        font-size: 15px;
-        margin-top: 35px;
-    }
-
     .links{
         padding-right: 50px;
     }
@@ -519,10 +511,36 @@ footer{
         margin: 0 20px;
     }
 
-    .project-card {
-        width: 100%;
-        margin-bottom: 20px;
+    .projects-container {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically on mobile */
+        align-items: center;
+        gap: 20px; /* Reduce gap between cards */
+        margin: 40px 0 30px;
+        padding: 0 10px;
     }
+
+    .project-card-link {
+        width: 100%; /* Full width on mobile */
+        max-width: 350px; /* Limit maximum width */
+    }
+
+    .project-card {
+        width: 100%; /* Full width of container */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .project-card p{
+        padding: 10px 40px;
+    }
+
+    .project-card img{
+        margin-top: 5px;
+    }
+
 
     .skills-container {
         gap: 25px;
@@ -582,9 +600,30 @@ footer{
         padding: 30px 0;
     }
 
+    .projects-container {
+        margin: 20px 0;
+        gap: 15px;
+    }
+
+    .project-card-link {
+        max-width: 100%; /* Full width on smallest screens */
+    }
+
     .project-card {
-        padding: 20px;
-        margin: 0 10px
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .project-card img {
+        max-height: 200px;
+    }
+
+    .project-card h3 {
+        font-size: 16px;
+    }
+
+    .project-card p {
+        font-size: 12px;
     }
 
     #contact {
