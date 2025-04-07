@@ -82,10 +82,10 @@ nav a:hover {
 #about{
     text-align: center;
     background-color: #673d4d;
-    padding: 60px 100px;
+    padding: 50px 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    margin: 0 30px 20px;  
+    margin: 0 30px 40px;  
     justify-content: center;
     align-items: center; 
 }
@@ -94,10 +94,10 @@ nav a:hover {
 #about h1{
     color: white;
     font-size: 3em;
-    margin: 10px 0 40px;
+    margin: 10px 0 30px;
     text-align: center; /* Center the heading */
     flex: 1 1 100%; /* Take full width on smaller screens */
-    padding: 30px 0 0;
+    padding: 20px 0 0;
     font-family: 'Futura Now Headline', sans-serif;
                                                 
 }
@@ -117,7 +117,7 @@ nav a:hover {
 }
 
 #about .links {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 30px 0 0;
     text-align: center;
     flex: 1 1 100%; /* Take full width on smaller screens */
@@ -126,6 +126,28 @@ nav a:hover {
 #about .links a {
     margin: 0 10px ;
     text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+#about .links a::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff3a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
 }
 
 #about .links a i {
@@ -135,25 +157,42 @@ nav a:hover {
 }
 
 #about .links a:hover i {
-    color: 
-#efda3f;
+    color: #efda3f;
     transform: scale(1.1);
     transition: transform 0.5s, color 0.5s;
 }
 
+#about .links a:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 #about .links i {
-    color: 
-#cab51a;
+    color: white;
     font-weight: 500;
 }
 
 .text-content {
     flex: 1;
     max-width: 650px;
+    border-radius: 10px;
+    background-color: #ffffff11;
+    padding: 40px 0;
 }
 
 .text-content h2{
     color: #efda3f;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.text-content p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 0 20px
+
 }
 
 .image-container {
@@ -199,7 +238,7 @@ nav a:hover {
     border-radius: 50%;
     animation: rotate 50s linear infinite;
 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%"><circle cx="50" cy="50" r="45" fill="none" stroke="%23efda3f" stroke-width="1" stroke-dasharray="8 10 12" /></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%"><circle cx="50" cy="50" r="45" fill="none" stroke="%23efda3f" stroke-width="2" stroke-dasharray="14 12 14 12 " /></svg>');
 }
 
 @keyframes rotate {
@@ -211,26 +250,42 @@ nav a:hover {
     }
 }
 
-h2 {
-    font-size: 1.2rem;
-    color: #ccc;
-    margin-bottom: 10px;
-    font-weight: normal;
-}
-
-h1 {
+.text-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     font-family: 'Futura Now Headline', sans-serif;
     line-height: 1.2;
+    text-shadow: rgba(0, 0, 0, 0.34) 0 1px 0.9rem;
 }
 
+.location {
+    justify-content: center;
+    display: flex;
+}
 
-p {
-    color: #ccc;
-    margin-bottom: 30px;
-    font-size: 1rem;
-    line-height: 1.6;
+.location-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.location-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.location-text {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.flag {
+    width: 20px;
+    height: 20px;
+    background-image: url("https://flagcdn.com/16x12/jm.png");
+    background-repeat: no-repeat;
+    margin: 5px 5px 0;
 }
 
 #projects{
@@ -631,6 +686,10 @@ footer{
         padding-top: 0;
     }
 
+    .location-text {
+        font-size: 14px;
+    }
+
     .links{
         padding-right: 50px;
     }
@@ -672,6 +731,11 @@ footer{
     .image-container {
         width: 200px;
         height: 200px;
+    }
+
+    .text-content{
+        padding: 20px 0;
+        margin: 0 20px;
     }
       
       
@@ -767,8 +831,13 @@ footer{
     }
 
     #about {
-        padding: 60px 30px 20px;
+        padding: 60px 0 20px;
         margin: 0 10px 20px;
+    }
+
+    .text-content{
+        padding: 20px 15px;
+        margin: 50px 0 20px;
     }
       
     #about h1 {
@@ -794,12 +863,19 @@ footer{
       
     #about .links {
         font-size: 2rem;
-        padding: 0;
+        padding: 0 0 15px;
     }
 
     #about img {
         width: 200px;
         height: 200px;
+    }
+
+    .location-content {
+        gap: 6px;
+    }
+    .location-text {
+        font-size: 12px;
     }
 
     .pro-skills {
